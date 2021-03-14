@@ -3,7 +3,7 @@ extends Node2D
 export (PackedScene) var Boss : PackedScene
 
 var _Enemy_Scene = preload("res://enemy/scene/Enemy.tscn");
-var _screen_size :Vector2;
+var _screen_size : Vector2;
 var _life;
 var _score;
 

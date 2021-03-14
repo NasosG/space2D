@@ -5,7 +5,7 @@
 [ext_resource path="res://ui/font/bahnschrift.ttf" type="DynamicFontData" id=3]
 
 [sub_resource type="DynamicFont" id=1]
-size = 20
+size = 21
 extra_spacing_char = 1
 font_data = ExtResource( 3 )
 
@@ -32,11 +32,14 @@ size_flags_horizontal = 3
 custom_constants/separation = 0
 
 [node name="Score" type="Label" parent="HSplitContainer"]
-margin_top = 2.0
 margin_right = 622.0
-margin_bottom = 23.0
+margin_bottom = 25.0
 size_flags_horizontal = 3
+size_flags_vertical = 5
 custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.964706, 0.333333, 0.333333, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 1, 1, 1, 1 )
 text = "Score : 0"
 uppercase = true
 

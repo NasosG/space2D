@@ -1,25 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://enemy/scene/boss/Boss.tscn" type="PackedScene" id=1]
 [ext_resource path="res://enemy/script/GalaxyBlackBoss.gd" type="Script" id=2]
 [ext_resource path="res://bullet/scene/NormalBullet.tscn" type="PackedScene" id=3]
-[ext_resource path="res://enemy/sprite/boss_2.png" type="Texture" id=4]
-
-[sub_resource type="SpriteFrames" id=1]
-animations = [ {
-"frames": [  ],
-"loop": true,
-"name": "default",
-"speed": 5.0
-} ]
-
-[sub_resource type="SpriteFrames" id=2]
-animations = [ {
-"frames": [  ],
-"loop": true,
-"name": "default",
-"speed": 5.0
-} ]
+[ext_resource path="res://fire_effect/scene/AlienBoss.tscn" type="PackedScene" id=4]
 
 [node name="GalaxyBlackBoss" instance=ExtResource( 1 )]
 scale = Vector2( 0.8, 0.8 )
@@ -31,23 +15,18 @@ _life = 25
 
 [node name="Sprite" parent="." index="0"]
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 4 )
 
 [node name="CollisionPolygon2D" parent="." index="1"]
 position = Vector2( -25.773, -24.0891 )
 scale = Vector2( 0.814859, 2.2774 )
-polygon = PoolVector2Array( 119.081, 43.2013, -47.5953, 49.6083, -35.1976, 28.9078, -53.1049, 15.6003, -64.1247, 3.77148, -0.759932, -11.5074, -7.64755, 4.26442, 51.5847, -6.08576, 72.2469, 5.25027, 87.3992, 26.9365, 88.7768, 8.2075, 65.3596, -7.07147, 39.1873, -7.56437, 0, 0, 0, 0, 29.545, -22.3505, 52.9624, -27.2791, 105.307, -22.8432, 128.724, 5.7432 )
+polygon = PoolVector2Array( 119.081, 43.2013, -47.5953, 49.6083, -35.1976, 28.9078, -0.759932, -11.5074, 51.5847, -6.08576, 128.724, 5.7432 )
 
-[node name="TurboReactors" type="Node2D" parent="." index="2"]
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="TurboReactors" index="0"]
-frames = SubResource( 1 )
-
-[node name="AnimatedSprite2" type="AnimatedSprite" parent="TurboReactors" index="1"]
-frames = SubResource( 2 )
-
-[node name="BulletLoader" parent="." index="4"]
+[node name="BulletLoader" parent="." index="3"]
 wait_time = 0.25
 
-[node name="BulletPosition" parent="." index="6"]
+[node name="BulletPosition" parent="." index="5"]
 position = Vector2( -0.206848, -204.418 )
+
+[node name="Alien" parent="." index="6" instance=ExtResource( 4 )]
+rotation = 1.55553
+scale = Vector2( 2.39092, 2.28599 )

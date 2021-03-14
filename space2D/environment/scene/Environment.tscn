@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://environment/script/Environment.gd" type="Script" id=1]
 [ext_resource path="res://environment/scene/decor/Decor.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://ui/font/bahnschrift.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://environment/scene/DynamicAudio.gd" type="Script" id=7]
 [ext_resource path="res://gameover.png" type="Texture" id=8]
+[ext_resource path="res://environment/scene/score.png" type="Texture" id=9]
 
 [sub_resource type="DynamicFont" id=1]
 size = 100
@@ -35,6 +36,11 @@ autostart = true
 script = ExtResource( 4 )
 _wait_time = 1.0
 
+[node name="score" type="Sprite" parent="."]
+position = Vector2( 42.1827, 21.4288 )
+scale = Vector2( 0.0971091, 0.0877485 )
+texture = ExtResource( 9 )
+
 [node name="GameUI" parent="." instance=ExtResource( 5 )]
 margin_right = 640.0
 margin_bottom = 45.0
@@ -52,6 +58,7 @@ position = Vector2( 730, 180 )
 [node name="GameOverLabel" type="Label" parent="."]
 margin_right = 640.0
 margin_bottom = 360.0
+rect_pivot_offset = Vector2( 44.3554, -12.6374 )
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.258824, 0.6, 0.968627, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
@@ -64,6 +71,7 @@ __meta__ = {
 
 [node name="gameover" type="Sprite" parent="GameOverLabel"]
 position = Vector2( 329.758, 174.392 )
+scale = Vector2( 1.00134, 1 )
 texture = ExtResource( 8 )
 [connection signal="timeout" from="GameTimer" to="." method="_on_GameTimer_timeout"]
 [connection signal="destroy" from="Player" to="." method="_on_Player_destroy"]

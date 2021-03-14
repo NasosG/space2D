@@ -2,7 +2,8 @@ extends MarginContainer
 
 export (PackedScene) var PlayerLife : PackedScene;
 
-const SCORE = "SCORE : ";
+""" const SCORE = "SCORE : ";""" 
+const SCORE = "            ";
 
 func _ready():
 	_update_score(0);

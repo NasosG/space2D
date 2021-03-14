@@ -28,19 +28,19 @@ polygon = PoolVector2Array( 18.7855, -25.8902, 23.5049, -21.6428, 16.1899, -7.95
 position = Vector2( -0.620117, -29.385 )
 rotation = 1.5708
 scale = Vector2( 0.170584, 0.128503 )
-frame = 2
+frame = 13
 
 [node name="TurboReactor2" parent="TurboReactors" instance=ExtResource( 4 )]
 position = Vector2( 7.51399, -25.1676 )
 rotation = 1.5708
 scale = Vector2( 0.0691213, 0.0477785 )
-frame = 1
+frame = 12
 
 [node name="TurboReactor3" parent="TurboReactors" instance=ExtResource( 4 )]
 position = Vector2( -7.96895, -24.7863 )
 rotation = 1.5708
 scale = Vector2( 0.0691213, 0.0477785 )
-frame = 1
+frame = 12
 
 [node name="BulletPosition" type="Position2D" parent="."]
 position = Vector2( 8.39233e-05, 22.9263 )

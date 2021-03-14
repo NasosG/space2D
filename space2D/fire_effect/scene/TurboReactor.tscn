@@ -39,5 +39,5 @@ animations = [ {
 
 [node name="TurboReactor" type="AnimatedSprite"]
 frames = SubResource( 1 )
-frame = 5
+frame = 26
 playing = true
