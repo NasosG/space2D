@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://enemy/script/Enemy.gd" type="Script" id=1]
+[ext_resource path="res://fire_effect/scene/Explosion.tscn" type="PackedScene" id=2]
+[ext_resource path="res://enemy/sprite/enemy0.png" type="Texture" id=3]
+[ext_resource path="res://fire_effect/scene/TurboReactor.tscn" type="PackedScene" id=4]
+
+[node name="Enemy" type="Area2D" groups=[
+"enemy",
+]]
+rotation = 1.5708
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+Explosion_Scene = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 3 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( 18.7855, -25.8902, 23.5049, -21.6428, 16.1899, -7.95661, 29.4042, 0.302243, 12.8865, 18.7079, -2.45149, 20.5957, -25.3405, 15.1685, -16.5757, 0.296035, -29.1161, -11.496, -26.2845, -14.5636, -11.5828, -14.4056, -14.958, -21.1707, 4.86337, -23.0586, 7.45905, -16.9234 )
+
+[node name="TurboReactors" type="Node2D" parent="."]
+
+[node name="TurboReactor" parent="TurboReactors" instance=ExtResource( 4 )]
+position = Vector2( -0.620117, -29.385 )
+rotation = 1.5708
+scale = Vector2( 0.170584, 0.128503 )
+frame = 2
+
+[node name="TurboReactor2" parent="TurboReactors" instance=ExtResource( 4 )]
+position = Vector2( 7.51399, -25.1676 )
+rotation = 1.5708
+scale = Vector2( 0.0691213, 0.0477785 )
+frame = 1
+
+[node name="TurboReactor3" parent="TurboReactors" instance=ExtResource( 4 )]
+position = Vector2( -7.96895, -24.7863 )
+rotation = 1.5708
+scale = Vector2( 0.0691213, 0.0477785 )
+frame = 1
+
+[node name="BulletPosition" type="Position2D" parent="."]
+position = Vector2( 8.39233e-05, 22.9263 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+[connection signal="area_entered" from="." to="." method="_on_Enemy_area_entered"]
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

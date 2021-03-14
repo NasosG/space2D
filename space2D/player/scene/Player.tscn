@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://player/script/Player.gd" type="Script" id=1]
+[ext_resource path="res://bullet/scene/NormalBullet.tscn" type="PackedScene" id=2]
+[ext_resource path="res://fire_effect/scene/Explosion.tscn" type="PackedScene" id=3]
+[ext_resource path="res://player/sprite/0player.png" type="Texture" id=4]
+[ext_resource path="res://fire_effect/scene/TurboReactor.tscn" type="PackedScene" id=5]
+
+[node name="Player" type="Area2D"]
+rotation = 1.5708
+script = ExtResource( 1 )
+BulletScene = ExtResource( 2 )
+Explosion_Scene = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 4 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -13.544, 0.00409261, -19.339, 2.10989, -19.339, -6.7991, -15.5527, -9.58317, -10.4301, -16.599, -7.20057, -18.4922, -2.96882, -22.0558, 2.61972, -21.4691, 8.27878, -18.1582, 13.5011, -12.4477, 19.7219, -7.32931, 19.407, 1.17516, 13.8948, -0.399726, 14.3003, 21.7131, -11.7742, 21.8312 )
+
+[node name="TurboReactors" type="Node2D" parent="."]
+position = Vector2( 0, -8 )
+
+[node name="TurboReactor" parent="TurboReactors" instance=ExtResource( 5 )]
+visible = false
+position = Vector2( -16.022, 35.0482 )
+rotation = -1.5708
+scale = Vector2( 0.15, 0.15 )
+frame = 9
+
+[node name="TurboReactor2" parent="TurboReactors" instance=ExtResource( 5 )]
+visible = false
+position = Vector2( 19.7772, 35.2985 )
+rotation = -1.5708
+scale = Vector2( 0.15, 0.15 )
+frame = 9
+
+[node name="TurboReactor3" parent="TurboReactors" instance=ExtResource( 5 )]
+position = Vector2( -4.0381, 32.9505 )
+rotation = -1.5708
+scale = Vector2( 0.0954037, 0.094368 )
+frame = 9
+
+[node name="TurboReactor4" parent="TurboReactors" instance=ExtResource( 5 )]
+position = Vector2( 6.36221, 32.6974 )
+rotation = -1.5708
+scale = Vector2( 0.0954037, 0.094368 )
+frame = 8
+
+[node name="BulletPosition" type="Position2D" parent="."]
+position = Vector2( 0.500686, -24.033 )
+
+[node name="PlayerEffect" type="Timer" parent="."]
+wait_time = 0.1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[connection signal="area_entered" from="." to="." method="_on_Player_area_entered"]
+[connection signal="timeout" from="PlayerEffect" to="." method="_on_PlayerEffect_timeout"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Andromeda Journey.ogg-68fe94a7114091af695a4a18f70ee2c4.oggstr"
+
+[deps]
+
+source_file="res://sounds/Andromeda Journey.ogg"
+dest_files=[ "res://.import/Andromeda Journey.ogg-68fe94a7114091af695a4a18f70ee2c4.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

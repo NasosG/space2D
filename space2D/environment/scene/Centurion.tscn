@@ -1,0 +1,23 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://environment/script/GalaxyBlack.gd" type="Script" id=1]
+[ext_resource path="res://environment/scene/Environment.tscn" type="PackedScene" id=2]
+[ext_resource path="res://enemy/scene/boss/GalaxyBlackBoss.tscn" type="PackedScene" id=3]
+[ext_resource path="res://environment/sprite/step_2.jpg" type="Texture" id=4]
+[ext_resource path="res://environment/sprite/planet_04.png" type="Texture" id=5]
+[ext_resource path="res://environment/scene/planet.gd" type="Script" id=6]
+
+[node name="GalaxyBlack" instance=ExtResource( 2 )]
+script = ExtResource( 1 )
+Boss = ExtResource( 3 )
+
+[node name="Decor" parent="." index="2"]
+_texture = ExtResource( 4 )
+
+[node name="planet_04" type="Sprite" parent="." index="10"]
+position = Vector2( 478.682, 126.971 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 5 )
+script = ExtResource( 6 )
+planetSpeed = 3
+[connection signal="load_next_step" from="Player" to="." method="_on_Player_load_next_step"]
