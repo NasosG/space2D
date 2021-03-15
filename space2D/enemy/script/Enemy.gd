@@ -13,7 +13,7 @@ signal destroy;
 func _ready():
 	rng.randomize();
 	rng_vertical.randomize();
-	move_speed = rng.randi_range(200, 400);
+	move_speed = rng.randi_range(220, 400);
 	
 func _process(delta):
 	position.x -= move_speed * delta;

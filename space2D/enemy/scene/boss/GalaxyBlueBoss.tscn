@@ -2,7 +2,8 @@
 
 [ext_resource path="res://enemy/scene/boss/Boss.tscn" type="PackedScene" id=1]
 [ext_resource path="res://bullet/scene/NormalBullet.tscn" type="PackedScene" id=2]
-[ext_resource path="res://fire_effect/scene/AlienBoss2.tscn" type="PackedScene" id=3]
+[ext_resource path="res://enemy/scene/boss/AlienBoss2.tscn" type="PackedScene" id=3]
+
 
 [node name="GalaxyBlueBoss" instance=ExtResource( 1 )]
 scale = Vector2( 0.6, 0.6 )

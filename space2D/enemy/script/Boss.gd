@@ -88,7 +88,7 @@ func _on_Boss_area_entered(area):
 			queue_free();
 			$MoveAnimation.stop();
 			_on_boss_dead();
-
+ 
 func _on_BulletTouchEffect_timeout():
 	visible = !visible;
 	yield(get_tree().create_timer(0.1), "timeout");

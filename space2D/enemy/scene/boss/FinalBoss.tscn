@@ -6,7 +6,7 @@
 [ext_resource path="res://enemy/sprite/final_boss.png" type="Texture" id=4]
 
 [node name="GalaxyBlueBoss" instance=ExtResource( 1 )]
-scale = Vector2( 0.58, 0.58 )
+scale = Vector2( 0.55, 0.55 )
 BulletScene = ExtResource( 3 )
 _animation_end_time = 0.75
 _life = 30
@@ -25,13 +25,13 @@ position = Vector2( 0, 70 )
 position = Vector2( 10.6401, 103.883 )
 rotation = -1.5708
 scale = Vector2( 0.277218, 0.199209 )
-frame = 0
+frame = 24
 
 [node name="TurboReactor2" parent="TurboReactors" index="1" instance=ExtResource( 2 )]
 position = Vector2( -5.82632, 104.823 )
 rotation = -1.5708
 scale = Vector2( 0.294741, 0.205519 )
-frame = 27
+frame = 23
 
 [node name="BulletPosition" parent="." index="6"]
 position = Vector2( 0.6147, -90.1585 )
