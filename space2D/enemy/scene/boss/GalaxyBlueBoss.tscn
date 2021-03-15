@@ -2,7 +2,7 @@
 
 [ext_resource path="res://enemy/scene/boss/Boss.tscn" type="PackedScene" id=1]
 [ext_resource path="res://bullet/scene/NormalBullet.tscn" type="PackedScene" id=2]
-[ext_resource path="res://enemy/sprite/boss_1.png" type="Texture" id=3]
+[ext_resource path="res://fire_effect/scene/AlienBoss2.tscn" type="PackedScene" id=3]
 
 [node name="GalaxyBlueBoss" instance=ExtResource( 1 )]
 scale = Vector2( 0.6, 0.6 )
@@ -12,9 +12,14 @@ _life = 30
 
 [node name="Sprite" parent="." index="0"]
 scale = Vector2( 1.25001, 1.51667 )
-texture = ExtResource( 3 )
+
+[node name="AnimatedSprite" parent="Sprite" index="0" instance=ExtResource( 3 )]
+rotation = -0.0802385
+scale = Vector2( 0.99215, 1.00012 )
+frame = 4
 
 [node name="CollisionPolygon2D" parent="." index="1"]
+scale = Vector2( 0.61129, 0.706279 )
 polygon = PoolVector2Array( 67.8291, 41.0541, 81.9553, 60.4777, 64.2975, 65.7749, 50.1713, 81.6668, 32.5136, 83.4325, 13.3118, 92.4859, -13.1588, 92.4859, -40.8897, 76.0994, -56.0158, 76.0994, -62.3183, 64.7549, -73.4326, 49.8825, -68.1352, 30.459, -66.3694, 7.50401, -80.4954, -22.5142, -75.198, -57.8296, -57.5402, -80.7845, -23.9905, -89.6133, 7.44757, -89.5944, 46.3809, -77.8157, 53.7032, -33.1083, 76.6582, -17.2163, 71.3608, 14.5676, 61.1894, 26.2286 )
 
 [node name="BulletPosition" parent="." index="5"]

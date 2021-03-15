@@ -25,13 +25,13 @@ position = Vector2( 0, 70 )
 position = Vector2( 10.6401, 103.883 )
 rotation = -1.5708
 scale = Vector2( 0.277218, 0.199209 )
-frame = 6
+frame = 0
 
 [node name="TurboReactor2" parent="TurboReactors" index="1" instance=ExtResource( 2 )]
 position = Vector2( -5.82632, 104.823 )
 rotation = -1.5708
 scale = Vector2( 0.294741, 0.205519 )
-frame = 5
+frame = 27
 
 [node name="BulletPosition" parent="." index="6"]
 position = Vector2( 0.6147, -90.1585 )

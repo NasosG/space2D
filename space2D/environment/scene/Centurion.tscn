@@ -14,7 +14,7 @@ Boss = ExtResource( 3 )
 [node name="Decor" parent="." index="2"]
 _texture = ExtResource( 4 )
 
-[node name="planet_04" type="Sprite" parent="." index="10"]
+[node name="planet_04" type="Sprite" parent="." index="3"]
 position = Vector2( 478.682, 126.971 )
 scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 5 )

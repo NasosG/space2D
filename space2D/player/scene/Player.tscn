@@ -27,26 +27,26 @@ visible = false
 position = Vector2( -16.022, 35.0482 )
 rotation = -1.5708
 scale = Vector2( 0.15, 0.15 )
-frame = 9
+frame = 3
 
 [node name="TurboReactor2" parent="TurboReactors" instance=ExtResource( 5 )]
 visible = false
 position = Vector2( 19.7772, 35.2985 )
 rotation = -1.5708
 scale = Vector2( 0.15, 0.15 )
-frame = 9
+frame = 3
 
 [node name="TurboReactor3" parent="TurboReactors" instance=ExtResource( 5 )]
 position = Vector2( -4.0381, 32.9505 )
 rotation = -1.5708
 scale = Vector2( 0.0954037, 0.094368 )
-frame = 9
+frame = 3
 
 [node name="TurboReactor4" parent="TurboReactors" instance=ExtResource( 5 )]
 position = Vector2( 6.36221, 32.6974 )
 rotation = -1.5708
 scale = Vector2( 0.0954037, 0.094368 )
-frame = 8
+frame = 2
 
 [node name="BulletPosition" type="Position2D" parent="."]
 position = Vector2( 0.500686, -24.033 )

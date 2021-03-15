@@ -14,6 +14,7 @@ __meta__ = {
 scale = Vector2( 0.25, 0.25 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( -2.6727, -9.67514e-06 )
 disabled = true
 
 [node name="MoveAnimation" type="AnimationPlayer" parent="."]
