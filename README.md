@@ -15,22 +15,21 @@ Use arrow buttons to move and space to shoot.
 
 ## Rules
 
-No rules. Just shoot 'em all to survive
+**No rules.** Just shoot 'em all to survive
 
-<div align="center"><img src="images/image2.png" alt="image2"></div>
 
 ## Screenshots
 
 ### Level 1
 <div align="center"><img src="images/2.png" alt="image1"></div>
 
-### Level 2
+### Level 1 Boss
 <div align="center"><img src="images/3.png" alt="image1"></div>
 
-### Level 3
+### Level 2 Boss
 <div align="center"><img src="images/4.png" alt="image1"></div>
 
-### Level 4
+### Level 3
 <div align="center"><img src="images/5.png" alt="image1"></div>
 
 ## Copyright and License
