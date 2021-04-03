@@ -47,8 +47,9 @@ scale = Vector2( 0.381597, 0.344775 )
 texture = ExtResource( 6 )
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
+margin_top = -0.667419
 margin_right = 640.0
-margin_bottom = 360.0
+margin_bottom = 359.333
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -113,5 +114,15 @@ flat = true
 position = Vector2( 324, 139 )
 scale = Vector2( 0.22695, 0.230435 )
 texture = ExtResource( 5 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 13.3326
+margin_top = 13.0
+margin_right = 205.333
+margin_bottom = 40.0
+text = "HIGHSCORE : 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="CenterContainer/VBoxContainer/VBoxContainer/Play" to="." method="_on_Play_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/VBoxContainer/Exit" to="." method="_on_Exit_pressed"]
