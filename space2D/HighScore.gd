@@ -5,7 +5,6 @@ const filepath = "user://highscore.txt";
 
 func _ready():
 	loadHighScore();
-	pass;
 
 func loadHighScore():
 	var file = File.new();
@@ -13,16 +12,13 @@ func loadHighScore():
 	file.open(filepath, File.READ);
 	_score = file.get_var();
 	file.close();
-	pass;
 
 func saveBestScore():
 	var file = File.new();
 	file.open(filepath, File.WRITE);
 	file.store_var(_score);
 	file.close();
-	pass;
 	
 func setHighScore(newHighScore):
 	_score = newHighScore;
 	saveBestScore();
-	pass;
