@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://ui/script/Main.gd" type="Script" id=1]
 [ext_resource path="res://environment/scene/decor/Decor.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://dark_matter.png" type="Texture" id=5]
 [ext_resource path="res://thumb-1920-380204.png" type="Texture" id=6]
 [ext_resource path="res://environment/script/Decor2.gd" type="Script" id=7]
+[ext_resource path="res://ui/scene/RichTextLabel.gd" type="Script" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 size = 50
@@ -121,6 +122,7 @@ margin_top = 13.0
 margin_right = 205.333
 margin_bottom = 40.0
 text = "HIGHSCORE : 0"
+script = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

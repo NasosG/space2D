@@ -26,6 +26,7 @@ enable_audio_input=true
 [autoload]
 
 AutoLoad="*res://AutoLoad.gd"
+HighScore="*res://HighScore.gd"
 
 [display]
 

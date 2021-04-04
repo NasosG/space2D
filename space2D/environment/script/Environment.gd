@@ -41,10 +41,8 @@ func _on_Player_destroy():
 	_life -= 1;
 	
 	if _life < 0: 
-		AutoLoad._stage = 1;
-		AutoLoad._stage_name = "Andromeda Galaxy";
-		AutoLoad._score = 0;
-		AutoLoad._life = 3;
+		_save_high_score(AutoLoad._score);
+		_game_reset()
 		_game_over();
 		
 	else:
@@ -55,6 +53,15 @@ func _on_RestorePlayer_timeout():
 	$Player.show();
 	$Player/PlayerEffect.start();
 
+func _game_reset():
+	AutoLoad._stage = 1;
+	AutoLoad._stage_name = "Andromeda Galaxy";
+	AutoLoad._score = 0;
+	AutoLoad._life = 3;
+	
+func _save_high_score(score):
+	if score > HighScore._score: HighScore.setHighScore(score); 
+		
 func _game_over():
 	$GameOverLabel.show();
 	$GameOverDelay.start();
