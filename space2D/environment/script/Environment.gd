@@ -41,7 +41,7 @@ func _on_Player_destroy():
 	_life -= 1;
 	
 	if _life < 0: 
-		_save_high_score(AutoLoad._score);
+		_save_high_score(_score);
 		_game_reset()
 		_game_over();
 		
