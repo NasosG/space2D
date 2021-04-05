@@ -8,7 +8,7 @@ const MOVE_FROM_CENTER_TO_BOTTOM = "Move_center_to_bottom";
 const MOVE_FROM_BOTTOM_TO_CENTER = "Move_bottom_to_center";
 
 #All export Var
-export (PackedScene) var BulletScene :PackedScene;
+export (PackedScene) var BulletScene : PackedScene;
 export (float) var _animation_end_time;
 export (int) var _life;
 

@@ -14,21 +14,18 @@ func _ready():
 	$CenterContainer/VBoxContainer/Name.text = AutoLoad._stage_name;
 
 func _on_Timer_timeout():
-	if (AutoLoad._stage == 1):
-		AutoLoad._stage += 1;
-		AutoLoad._stage_name = "Centurion Galaxy";
-		get_tree().change_scene(scene_Andromeda);
-	elif (AutoLoad._stage == 2):
-		AutoLoad._stage += 1;
-		AutoLoad._stage_name = "Aphrodite Galaxy";
-		get_tree().change_scene(scene_Centurion);
-	elif (AutoLoad._stage == 3):
-		AutoLoad._stage += 1;
-		AutoLoad._stage_name = "Zeus Nebula Galaxy";
-		get_tree().change_scene(scene_Aphrodite);
-	elif (AutoLoad._stage == 4):
-		AutoLoad._stage += 1;
-		AutoLoad._stage_name = "Nemesia Galaxy";
-		get_tree().change_scene(scene_Zeus);
+	if (AutoLoad._stage % 5 == 1): 
+		change_level("Centurion Galaxy", scene_Andromeda);
+	elif (AutoLoad._stage % 5 == 2): 
+		change_level("Aphrodite Galaxy", scene_Centurion);
+	elif (AutoLoad._stage % 5 == 3): 
+		change_level("Zeus Nebula Galaxy", scene_Aphrodite);
+	elif (AutoLoad._stage % 5 == 4): 
+		change_level("Nemesia Galaxy", scene_Zeus);
 	else: 
-		get_tree().change_scene(scene_Nemesia);
+		change_level("Andromeda Galaxy", scene_Nemesia);		
+		
+func change_level(stage_name, next_scene):
+	AutoLoad._stage += 1;
+	AutoLoad._stage_name = str(stage_name);
+	get_tree().change_scene(next_scene);
