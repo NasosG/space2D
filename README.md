@@ -2,7 +2,7 @@
  
 A space shooter game [80s style] where the player has the ability to freely move horizontally and vertically. There are 5 levels, set on different planets, with a boss at the end of each level. The aim is to escape enemy ships and defeat the boss in each level. But there is a score. Try your best to max it. If you do, you have a chance to appear in the hall of fame - High Scores page in the game's menu.
 
-<div align="center"><img src="images/1.gif" alt="image1"></div>
+<div align="center"><img src="images/1.gif" alt="image1" width="970" width="570"></div>
 
 ## Game Files and Demo
 
