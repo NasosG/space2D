@@ -29,7 +29,7 @@ func _on_move(delta):
 	if Input.is_action_pressed("ui_down") : velocity.y += 1;
 	if Input.is_action_pressed("ui_left") : velocity.x -= 1;
 	if Input.is_action_pressed("ui_right") : velocity.x += 1;
-	position +=  velocity * move_speed * delta;
+	position += velocity * move_speed * delta;
 
 
 func _restrict_move():
@@ -60,28 +60,28 @@ func _on_Player_area_entered(area):
 
 
 func _on_PlayerEffect_timeout():
-	_player_effect += 1
-	visible = !visible
+	_player_effect += 1;
+	visible = !visible;
 	if _player_effect == 30:
-		_player_effect = 0
-		visible = true
-		$PlayerEffect.stop()
-		$CollisionPolygon2D.disabled = false
+		_player_effect = 0;
+		visible = true;
+		$PlayerEffect.stop();
+		$CollisionPolygon2D.disabled = false;
 
 
 func _move_on():
-	$AnimationPlayer.add_animation("MOVE_ON", _create_animation())
-	$AnimationPlayer.play("MOVE_ON")
+	$AnimationPlayer.add_animation("MOVE_ON", _create_animation());
+	$AnimationPlayer.play("MOVE_ON");
 
 
 func _create_animation():
-	var anim = Animation.new()
-	anim.length = 2.0
-	var track_index = anim.add_track(Animation.TYPE_VALUE)
-	anim.track_set_path(track_index, ".:position")
-	anim.track_insert_key(track_index, 0.0, position)
-	anim.track_insert_key(track_index, 2.0, Vector2(_screen_size.x + 50, position.y))
-	return anim
+	var anim = Animation.new();
+	anim.length = 2.0;
+	var track_index = anim.add_track(Animation.TYPE_VALUE);
+	anim.track_set_path(track_index, ".:position");
+	anim.track_insert_key(track_index, 0.0, position);
+	anim.track_insert_key(track_index, 2.0, Vector2(_screen_size.x + 50, position.y));
+	return anim;
 
 
 func _on_AnimationPlayer_animation_finished(anim_name):
