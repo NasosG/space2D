@@ -36,7 +36,7 @@ func _on_EnemyLoader_timeout():
 		if i == 1:
 			enemy.modulate = Color(0.8, 0.25, 0.25); # modulate second enemy's color a bit
 		_enemy_attack(enemy);
-		if i == 0: yield(get_tree().create_timer(1), "timeout");
+		#if i == 0: yield(get_tree().create_timer(1), "timeout");
 
 func _on_Enemy_destroy():
 	_score += 100;
