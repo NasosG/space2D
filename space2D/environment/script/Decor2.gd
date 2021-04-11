@@ -1,20 +1,23 @@
 extends Node2D
 
-export (int) var speed = 5;
+#export (int) var speed = 5;
 export (Texture) var _texture;
-var a;
+var screen_limit;
+
 func _ready():
 	$Sprite.texture = _texture;
 	$Sprite2.texture = _texture;
 
 func _process(delta):
-	if (!a):
-		position.x -= 5 * delta;
+	var speed = 5;
+	
+	if (!screen_limit):
+		position.x -= speed * delta;
 	else:
-		position.x += 5 * delta;
+		position.x += speed * delta;
 	
 	if global_position.x < -100 || global_position.x > 0:
-		a = !a;
+		screen_limit = !screen_limit;
 		
 	"""
 	# never happens as long as code above exists

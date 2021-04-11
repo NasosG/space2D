@@ -6,6 +6,7 @@ var _Enemy_Scene = preload("res://enemy/scene/Enemy.tscn");
 var _screen_size : Vector2;
 var _life;
 var _score;
+var _random_number = RandomNumberGenerator.new();
 
 func _ready():
 	randomize();
@@ -21,11 +22,21 @@ func _init_ui():
 		$GameUI._add_life();
 
 func _on_EnemyLoader_timeout():
-	var enemy = _Enemy_Scene.instance();
-	enemy.position = Vector2(_screen_size.x + 50, rand_range(35, _screen_size.y - 35));
-	enemy.connect("destroy", self,"_on_Enemy_destroy");
-	add_child(enemy);
-	_enemy_attack(enemy);
+	# get a rand number from 1 to 100
+	# if number is bigger than 70 spawn two enemies
+	# else spawn just one
+	_random_number.randomize();
+	var extra_enemies =  _random_number.randi_range(0, 100) > 70;
+	
+	for i in (2 if extra_enemies else 1):
+		var enemy = _Enemy_Scene.instance();
+		enemy.position = Vector2(_screen_size.x + 50, rand_range(35, _screen_size.y - 35));
+		enemy.connect("destroy", self,"_on_Enemy_destroy");
+		add_child(enemy);
+		if i == 1:
+			enemy.modulate = Color(0.8, 0.25, 0.25); # modulate second enemy's color a bit
+		_enemy_attack(enemy);
+		if i == 0: yield(get_tree().create_timer(1), "timeout");
 
 func _on_Enemy_destroy():
 	_score += 100;

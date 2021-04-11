@@ -36,11 +36,11 @@ __meta__ = {
 }
 
 [node name="Decor" parent="." instance=ExtResource( 2 )]
+speed = 5
 _texture = ExtResource( 3 )
 
 [node name="Decor2" parent="." instance=ExtResource( 2 )]
 script = ExtResource( 7 )
-speed = 200
 
 [node name="thumb-1920-380204" type="Sprite" parent="Decor2"]
 position = Vector2( 319.718, 177.5 )
